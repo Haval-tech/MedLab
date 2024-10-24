@@ -1,46 +1,38 @@
-from flask import Flask, render_template, request
+import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 
-app = Flask(__name__)
+# Streamlit app title
+st.title('Pharmacy Collaboration Lab')
 
-# Route for the form page
-@app.route('/')
-def form():
-    return render_template('index.html')
+# Streamlit form
+with st.form("collaboration_form"):
+    name = st.text_input("Name")
+    email = st.text_input("Email")
+    submit_button = st.form_submit_button("Submit")
 
-# Route for handling form submission
-@app.route('/submit', methods=['POST'])
-def submit():
-    name = request.form['name']
-    email = request.form['email']
-
-    # Example criteria: basic check on the name and email (you can expand this)
-    if "pharmacy" in name.lower() or "pharmacy" in email.lower():
-        # If criteria are met, send acceptance email
-        send_email(email, "Accepted", f"Hello {name}, you have been accepted into the collaboration!")
-        return f"Congratulations {name}, you've been accepted!"
-    else:
-        # If criteria are not met, send rejection email
-        send_email(email, "Not Accepted", f"Hello {name}, unfortunately, your application was not accepted.")
-        return f"Sorry {name}, you did not meet the criteria."
-
-# Function to send an email
+# Define email sending function
 def send_email(recipient_email, subject, body):
     sender_email = "halo.wigan@gmail.com"  # Your email
     sender_password = "snod ncei ellk xxzb"  # Your app-specific password
 
-    # Create the email content
     msg = MIMEText(body)
     msg['Subject'] = subject
     msg['From'] = sender_email
     msg['To'] = recipient_email
 
-    # Sending the email
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
         server.starttls()
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, recipient_email, msg.as_string())
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Handle form submission
+if submit_button:
+    if "pharmacy" in name.lower() or "pharmacy" in email.lower():
+        # Send acceptance email
+        send_email(email, "Accepted", f"Hello {name}, you've been accepted into the collaboration!")
+        st.success(f"Congratulations {name}, you've been accepted!")
+    else:
+        # Send rejection email
+        send_email(email, "Not Accepted", f"Hello {name}, unfortunately, you were not accepted.")
+        st.warning(f"Sorry {name}, you did not meet the criteria.")
