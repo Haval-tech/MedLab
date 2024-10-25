@@ -59,7 +59,7 @@ if submit_button:
         # Define the email content
         email_subject = "Confirmation of Information Submission"
         email_body = f"Dear {full_name},\n\n" \
-                     "Thank you for submitting your information to the MedLab Project: Collaboration Hub. " \
+                     "Thank you for submitting your information to the MedLab Project. " \
                      "We have received your details, and one of our team members will be in touch with you soon to discuss the next steps.\n\n" \
                      "Best regards,\n" \
                      "The MedLab Team"
