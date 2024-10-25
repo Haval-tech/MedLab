@@ -21,7 +21,7 @@ AI applications in pharmacy and medicine, while building a strong foundation for
 """)
 
 # Founder Information
-st.write("_Founded by: Haval, a pharmacy student at UEA (East Anglia University) , Norwich, UK._")
+st.write("_Founded by: Haval, a pharmacy student at UEA (University of East Anglia) , Norwich, UK._")
 
 # Invitation to Fill the Form
 st.markdown("<p style='color:#d9534f; font-weight:bold; margin-top:20px;'>If you are interested, please fill the form below.</p>", unsafe_allow_html=True)
