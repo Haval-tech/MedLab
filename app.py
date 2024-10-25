@@ -2,10 +2,26 @@ import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 
-# Streamlit app title
+# Title of the project
 st.title('MedLab Project: Collaboration Hub')
 
-# Streamlit form
+# Project Overview Section
+st.subheader("Project Overview")
+st.write(
+    """
+    **MedLab Sim** is a cutting-edge initiative focused on creating an AI-powered tool to streamline drug discovery. Our first goal is to develop a predictive model that estimates critical drug properties, starting with solubility, to help researchers save time and resources on early-stage experiments.
+    
+    **Why This Project Matters**  
+    MedLab Sim accelerates the drug discovery process by simulating essential drug properties, allowing us to filter out less promising compounds quickly. It’s also a unique educational tool, giving students hands-on experience with AI applications in pharmacy and medicine, while building a strong foundation for further developments in the future.
+    
+    Founded by **Haval**, a pharmacy student at UEA, Norwich, UK.
+    """
+)
+
+# Instructions to Fill Out the Form
+st.write("If you are interested, please fill out the form below:")
+
+# Streamlit form for user information
 with st.form("collaboration_form"):
     full_name = st.text_input("Full Name")
     email = st.text_input("Valid Email Address")
