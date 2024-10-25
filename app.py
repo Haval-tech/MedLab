@@ -31,7 +31,7 @@ with st.form("collaboration_form"):
     email = st.text_input("Valid Email Address")
     academic_status = st.text_input("Your Academic Status (e.g., '3rd-year Pharmacy Student at UEA')")
     skills = st.text_area("Skill(s) (e.g., research, data analysis, drug formulation, etc.)")
-    hours = st.slider("How many hours are you willing to work on the project (per week)?", 1, 10)
+    hours = st.slider("How many hours are you able to dedicate to this project per week?", 1, 10)
     submit_button = st.form_submit_button("Submit")
 
 # Define email sending function
