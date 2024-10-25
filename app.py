@@ -2,26 +2,31 @@ import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 
-# Title of the project
+# Streamlit app title
 st.title('MedLab Project: Collaboration Hub')
 
 # Project Overview Section
 st.subheader("Project Overview")
-st.write(
-    """
-    **MedLab Sim** is a cutting-edge initiative focused on creating an AI-powered tool to streamline drug discovery. Our first goal is to develop a predictive model that estimates critical drug properties, starting with solubility, to help researchers save time and resources on early-stage experiments.
-    
-    **Why This Project Matters**  
-    MedLab Sim accelerates the drug discovery process by simulating essential drug properties, allowing us to filter out less promising compounds quickly. It’s also a unique educational tool, giving students hands-on experience with AI applications in pharmacy and medicine, while building a strong foundation for further developments in the future.
-    
-    Founded by **Haval**, a pharmacy student at UEA, Norwich, UK.
-    """
-)
+st.write("""
+**MedLab Sim** is a cutting-edge initiative focused on creating an AI-powered tool to streamline drug discovery. 
+Our first goal is to develop a predictive model that estimates critical drug properties, starting with solubility, 
+to help researchers save time and resources on early-stage experiments.
+""")
 
-# Instructions to Fill Out the Form
-st.write("If you are interested, please fill out the form below:")
+st.subheader("Why This Project Matters")
+st.write("""
+MedLab Sim accelerates the drug discovery process by simulating essential drug properties, allowing us to filter out 
+less promising compounds quickly. It’s also a unique educational tool, giving students hands-on experience with 
+AI applications in pharmacy and medicine, while building a strong foundation for further developments in the future.
+""")
 
-# Streamlit form for user information
+# Founder Information
+st.write("_Founded by: Haval, a pharmacy student at UEA, Norwich, UK._")
+
+# Invitation to Fill the Form
+st.markdown("<p style='color:#d9534f; font-weight:bold; margin-top:20px;'>If you are interested, please fill the form below.</p>", unsafe_allow_html=True)
+
+# Streamlit form
 with st.form("collaboration_form"):
     full_name = st.text_input("Full Name")
     email = st.text_input("Valid Email Address")
