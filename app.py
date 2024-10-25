@@ -3,12 +3,15 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Streamlit app title
-st.title('Pharmacy Collaboration Lab')
+st.title('MedLab Project: Collaboration Hub')
 
 # Streamlit form
 with st.form("collaboration_form"):
-    name = st.text_input("Name")
-    email = st.text_input("Email")
+    full_name = st.text_input("Full Name")
+    email = st.text_input("Valid Email Address")
+    academic_status = st.text_input("Your Academic Status (e.g., '3rd-year Pharmacy Student at UEA')")
+    skills = st.text_area("Skill(s) (e.g., research, data analysis, drug formulation, etc.)")
+    hours = st.slider("How many hours are you willing to work on the project (per week)?", 1, 10)
     submit_button = st.form_submit_button("Submit")
 
 # Define email sending function
@@ -28,11 +31,19 @@ def send_email(recipient_email, subject, body):
 
 # Handle form submission
 if submit_button:
-    if "pharmacy" in name.lower() or "pharmacy" in email.lower():
-        # Send acceptance email
-        send_email(email, "Accepted", f"Hello {name}, you've been accepted into the collaboration!")
-        st.success(f"Congratulations {name}, you've been accepted!")
+    if full_name and email and academic_status and skills:
+        # Define the message after form submission
+        st.success("Thank you for submitting your information, we'll be in touch soon via email.")
+        
+        # Define the email content
+        email_subject = "Confirmation of Information Submission"
+        email_body = f"Dear {full_name},\n\n" \
+                     "Thank you for submitting your information to the MedLab Project: Collaboration Hub. " \
+                     "We have received your details, and one of our team members will be in touch with you soon to discuss the next steps.\n\n" \
+                     "Best regards,\n" \
+                     "The MedLab Team"
+        
+        # Send confirmation email
+        send_email(email, email_subject, email_body)
     else:
-        # Send rejection email
-        send_email(email, "Not Accepted", f"Hello {name}, unfortunately, you were not accepted.")
-        st.warning(f"Sorry {name}, you did not meet the criteria.")
+        st.error("Please complete all fields before submitting.")
