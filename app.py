@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Streamlit app title
-st.title('MedLab Project: Collaboration Hub')
+st.title('MedLab Project')
 
 # Project Overview Section
 st.subheader("Project Overview")
