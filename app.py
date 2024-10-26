@@ -14,9 +14,8 @@ Our first goal is to develop a predictive model that estimates critical drug pro
 
 st.subheader("Why This Project Matters")
 st.write("""
-MedLab Sim accelerates the drug discovery process by simulating essential drug properties, allowing us to filter out 
-less promising compounds quickly. It’s also a unique educational tool, giving students hands-on experience with 
-AI applications in pharmacy and medicine, while building a strong foundation for further developments in the future.
+MedLab speeds up drug discovery by simulating key drug properties, helping us quickly rule out less promising compounds.
+It’s also a valuable learning tool, giving students practical experience with AI in pharmacy and medicine and setting a strong base for future growth.
 """)
 
 # Founder Information
