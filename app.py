@@ -17,13 +17,13 @@ This means faster breakthroughs, reduced costs, and a fundamentally new way to a
 
 st.subheader("Why This Matters")
 st.write("""
-MedLab speeds up drug discovery by simulating key drug properties, enabling us to filter out weak candidates and focus on those with real promise.
-It’s also a valuable learning tool, giving students practical experience with AI in pharmacy and medicine.
-MedLab isn’t just a project; it’s a revolution in the drug discovery process.
+MedLab has the potential to transform drug discovery by simulating critical drug properties, enabling us to filter out weak candidates and focus on those with real promise.
+Beyond research, it’s a hands-on training ground, equipping the next generation of pharmacy and AI professionals with the skills to drive innovation.
+MedLab isn’t just a project; it’s a catalyst for revolutionary advances in medicine.
 """)
 
-# Founder Information
-st.write("_Initiated by Haval, an MPharm student at UEA, Norwich, UK._")
+# Motivational Call to Action
+st.write("**Join us in shaping the future.**")
 
 # Invitation to Fill the Form
 st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re inspired to shape the future of medicine and technology, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
@@ -40,6 +40,9 @@ with st.form("collaboration_form"):
 
     hours = st.slider("How many hours are you able to dedicate to this project per week?", 1, 10)
     submit_button = st.form_submit_button("Submit")
+
+# Founder Information (placed below the form)
+st.write("_Initiated and Led by Haval, pharmacy student at UEA, Norwich, UK._")
 
 # Define email sending function
 def send_email(recipient_email, subject, body):
