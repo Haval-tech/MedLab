@@ -42,7 +42,7 @@ with st.form("collaboration_form"):
     submit_button = st.form_submit_button("Submit")
 
 # Founder Information (placed below the form)
-st.write("_Initiated and Led by Haval, pharmacy student at UEA, Norwich, UK._")
+st.write("_Initiated by Haval, An MPharm student at UEA, Norwich, UK._")
 
 # Define email sending function
 def send_email(recipient_email, subject, body):
