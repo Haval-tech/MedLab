@@ -6,23 +6,27 @@ from email.mime.text import MIMEText
 st.title('MedLab Project')
 
 # Project Overview Section
-st.subheader("Project Overview")
+st.subheader("MedLab")
+st.write("**The next era of drug discovery starts here.**")
+
 st.write("""
-**MedLab Sim** is a project to create an AI tool that helps make drug discovery faster and easier. 
-Our first goal is to develop a predictive model that estimates critical drug properties, to help researchers save time and resources on early-stage experiments.
+At MedLab, we’re building AI to revolutionize drug discovery, making the process faster, smarter, and more efficient.
+Our first mission is clear: create a powerful predictive model that estimates essential drug properties, allowing researchers to identify promising compounds long before they reach the lab.
+This means faster breakthroughs, reduced costs, and a fundamentally new way to accelerate discovery.
 """)
 
-st.subheader("Why This Project Matters")
+st.subheader("Why This Matters")
 st.write("""
-MedLab speeds up drug discovery by simulating key drug properties, helping us quickly rule out less promising compounds.
-It’s also a valuable learning tool, giving students practical experience with AI in pharmacy and medicine and setting a strong base for future growth.
+MedLab has the potential to transform drug discovery by simulating critical drug properties, enabling us to filter out weak candidates and focus on those with real promise.
+Beyond research, it’s a hands-on training ground, equipping the next generation of pharmacy and AI professionals with the skills to drive innovation.
+MedLab isn’t just a project; it’s a catalyst for revolutionary advances in medicine.
 """)
 
 # Founder Information
-st.write("_Founded by: Haval, a pharmacy student at UEA, Norwich, UK._")
+st.write("_Initiated and Led by Haval, pharmacy student at UEA, Norwich, UK._")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you are interested in contributing, collaborating, or staying updated on the latest developments with MedLab, please fill the form below.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re inspired to shape the future of medicine and technology, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
