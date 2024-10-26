@@ -8,7 +8,7 @@ st.title('MedLab Project: Collaboration Hub')
 # Project Overview Section
 st.subheader("Project Overview")
 st.write("""
-**MedLab Sim** is a cutting-edge initiative focused on creating an AI-powered tool to streamline drug discovery. 
+**MedLab Sim** is a project to create an AI tool that helps make drug discovery faster and easier. 
 Our first goal is to develop a predictive model that estimates critical drug properties, starting with solubility, 
 to help researchers save time and resources on early-stage experiments.
 """)
