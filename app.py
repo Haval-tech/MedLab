@@ -24,7 +24,7 @@ AI applications in pharmacy and medicine, while building a strong foundation for
 st.write("_Founded by: Haval, a pharmacy student at UEA, Norwich, UK._")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you are interested, please fill the form below.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you are interested in contributing, collaborating, or staying updated on the latest developments with MedLab, please fill the form below.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
