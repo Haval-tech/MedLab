@@ -26,7 +26,7 @@ MedLab isn’t just a project; it’s a catalyst for revolutionary advances in m
 st.write("**Join us in shaping the future.**")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re inspired to shape the future of medicine and technology, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re interested, Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
