@@ -24,7 +24,7 @@ MedLab isn’t just a project; it’s a revolution in the drug discovery process
 
 # Motivational Call to Action and Signature
 st.write("**Join us in shaping the future.**")
-st.write("_Haval, Pharmacy Student, UEA, Norwich, UK_")
+st.write("_Haval, MPharm Student, UEA, Norwich, UK_")
 
 # Invitation to Fill the Form
 st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re interested, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
