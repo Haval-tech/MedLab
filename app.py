@@ -22,11 +22,12 @@ Beyond research, it’s a hands-on training ground, equipping the next generatio
 MedLab isn’t just a project; it’s a catalyst for revolutionary advances in medicine.
 """)
 
-# Motivational Call to Action
+# Motivational Call to Action and Signature
 st.write("**Join us in shaping the future.**")
+st.write("_Haval, Pharmacy Student, UEA, Norwich, UK_")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re interested, Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re inspired to shape the future of medicine and technology, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
@@ -40,9 +41,6 @@ with st.form("collaboration_form"):
 
     hours = st.slider("How many hours are you able to dedicate to this project per week?", 1, 10)
     submit_button = st.form_submit_button("Submit")
-
-# Founder Information (placed below the form)
-st.write("_Initiated by Haval, An MPharm student at UEA, Norwich, UK._")
 
 # Define email sending function
 def send_email(recipient_email, subject, body):
