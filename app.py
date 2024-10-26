@@ -17,7 +17,7 @@ This means faster breakthroughs, reduced costs, and a fundamentally new way to a
 
 st.subheader("Why This Matters")
 st.write("""
-MedLab has the potential to transform drug discovery by simulating critical drug properties, enabling us to filter out weak candidates and focus on those with real promise.
+MedLab speeds up drug discovery by simulating key drug properties, enabling us to filter out weak candidates and focus on those with real promise.
 Beyond research, it’s a hands-on training ground, equipping the next generation of pharmacy and AI professionals with the skills to drive innovation.
 MedLab isn’t just a project; it’s a catalyst for revolutionary advances in medicine.
 """)
