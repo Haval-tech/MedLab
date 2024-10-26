@@ -27,7 +27,7 @@ st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you
 # Streamlit form
 with st.form("collaboration_form"):
     full_name = st.text_input("Full Name")
-    email = st.text_input("Valid Email Address")
+    email = st.text_input("Email Address")
     academic_status = st.text_input("Your Academic Status (e.g., '3rd-year Pharmacy Student at UEA')")
     skills = st.text_area("Skill(s) (e.g., research, data analysis, drug formulation, etc.)")
     
