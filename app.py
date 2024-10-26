@@ -34,7 +34,7 @@ with st.form("collaboration_form"):
     # New input box for skills the user expects to achieve
     expected_skills = st.text_area("What skills do you expect to achieve by collaborating on this project?")
 
-    hours = st.slider("How many hours are you willing to work on the project (per week)?", 1, 10)
+    hours = st.slider("How many hours are you able to dedicate to this project per week?", 1, 10)
     submit_button = st.form_submit_button("Submit")
 
 # Define email sending function
