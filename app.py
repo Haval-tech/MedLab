@@ -9,7 +9,8 @@ st.title('MedLab Project: Collaboration Hub')
 st.subheader("Project Overview")
 st.write("""
 **MedLab Sim** is a cutting-edge initiative focused on creating an AI-powered tool to streamline drug discovery. 
-Our first goal is to develop a predictive model that estimates critical drug properties, to help researchers save time and resources on early-stage experiments.
+Our first goal is to develop a predictive model that estimates critical drug properties, starting with solubility, 
+to help researchers save time and resources on early-stage experiments.
 """)
 
 st.subheader("Why This Project Matters")
@@ -23,15 +24,19 @@ AI applications in pharmacy and medicine, while building a strong foundation for
 st.write("_Founded by: Haval, a pharmacy student at UEA, Norwich, UK._")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you are interested in contributing, collaborating, or staying updated on the latest developments with MedLab, please fill the form below.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you are interested, please fill the form below.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
     full_name = st.text_input("Full Name")
-    email = st.text_input("Email Address")
+    email = st.text_input("Valid Email Address")
     academic_status = st.text_input("Your Academic Status (e.g., '3rd-year Pharmacy Student at UEA')")
     skills = st.text_area("Skill(s) (e.g., research, data analysis, drug formulation, etc.)")
-    hours = st.slider("How many hours are you able to dedicate to this project per week?", 1, 10)
+    
+    # New input box for skills the user expects to achieve
+    expected_skills = st.text_area("What skills do you expect to achieve by collaborating on this project?")
+
+    hours = st.slider("How many hours are you willing to work on the project (per week)?", 1, 10)
     submit_button = st.form_submit_button("Submit")
 
 # Define email sending function
@@ -51,7 +56,7 @@ def send_email(recipient_email, subject, body):
 
 # Handle form submission
 if submit_button:
-    if full_name and email and academic_status and skills:
+    if full_name and email and academic_status and skills and expected_skills:
         # Define the message after form submission
         st.success("Thank you for submitting your information, we'll be in touch soon via email.")
         
