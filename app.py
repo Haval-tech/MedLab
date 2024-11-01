@@ -27,7 +27,7 @@ st.write("**Join us in shaping the future.**")
 st.write("_Haval, MPharm Student, UEA, Norwich, UK_")
 
 # Invitation to Fill the Form
-st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re interested, let’s connect. Fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
+st.markdown("<p style='color:#f5f5dc; font-weight:bold; margin-top:20px;'>If you’re interested, Please fill out the form below to contribute, collaborate, or stay updated.</p>", unsafe_allow_html=True)
 
 # Streamlit form
 with st.form("collaboration_form"):
